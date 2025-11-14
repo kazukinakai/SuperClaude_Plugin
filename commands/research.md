@@ -1,5 +1,5 @@
 ---
-name: sc:research
+name: research
 description: Deep Research - Parallel web search with evidence-based synthesis
 ---
 

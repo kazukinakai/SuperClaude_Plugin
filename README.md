@@ -1,514 +1,92 @@
-<div align="center">
+# 🤖 Airis Agent - Claude Code Plugin
 
-# 🚀 SuperClaude Framework
+> **Autonomous AI workflow orchestrator for Claude Code**
 
-### **Transform Claude Code into a Structured Development Platform**
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/agiletec-inc/airis-agent)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> ⚠️ **Repository Notice**  
-> This repository now contains the **generated distribution artefacts** for the SuperClaude Claude Code plugin.  
-> Authoritative sources (agents, commands, hooks, skills) live in [`SuperClaude_Framework/plugins/superclaude`](https://github.com/SuperClaude-Org/SuperClaude_Framework/tree/main/plugins/superclaude).  
-> Please submit changes there and rebuild via `make build-plugin && make sync-plugin-repo`.
-
-<p align="center">
-  <a href="https://github.com/hesreallyhim/awesome-claude-code/">
-  <img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Claude Code">
-  </a>
-<a href="https://github.com/SuperClaude-Org/SuperGemini_Framework" target="_blank">
-  <img src="https://img.shields.io/badge/Try-SuperGemini_Framework-blue" alt="Try SuperGemini Framework"/>
-</a>
-<a href="https://github.com/SuperClaude-Org/SuperQwen_Framework" target="_blank">
-  <img src="https://img.shields.io/badge/Try-SuperQwen_Framework-orange" alt="Try SuperQwen Framework"/>
-</a>
-  <img src="https://img.shields.io/badge/version-4.3.2-blue" alt="Version">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
-</p>
-
-<p align="center">
-  <a href="https://superclaude.netlify.app/">
-    <img src="https://img.shields.io/badge/🌐_Visit_Website-blue" alt="Website">
-  </a>
-  <a href="https://github.com/SuperClaude-Org/SuperClaude_Plugin">
-    <img src="https://img.shields.io/badge/🔌_Plugin-Distribution-green" alt="Plugin Distribution">
-  </a>
-</p>
-
-<p align="center">
-  <a href="README.md">
-    <img src="https://img.shields.io/badge/🇺🇸_English-blue" alt="English">
-  </a>
-  <a href="README-zh.md">
-    <img src="https://img.shields.io/badge/🇨🇳_中文-red" alt="中文">
-  </a>
-  <a href="README-ja.md">
-    <img src="https://img.shields.io/badge/🇯🇵_日本語-green" alt="日本語">
-  </a>
-</p>
-
-<p align="center">
-  <a href="#-quick-installation">Quick Start</a> •
-  <a href="#-support-the-project">Support</a> •
-  <a href="#-whats-new-in-v4">Features</a> •
-  <a href="#-documentation">Docs</a> •
-  <a href="#-contributing">Contributing</a>
-</p>
-
-</div>
+Airis Agent provides **confidence gating, deep research, and repository indexing** for Claude Code with intelligent workflow orchestration.
 
 ---
 
-<div align="center">
+## ⚡ Quick Installation
 
-## 📊 **Framework Statistics**
-
-| **Commands** | **Agents** | **Modes** | **MCP Servers** |
-|:------------:|:----------:|:---------:|:---------------:|
-| **3** | **3** | **—** | **—** |
-| `/sc:*` commands | Specialized AI | — | Integrations delegated to AIRIS Gateway |
-
-Use the new `/sc:help` command to see a full list of all available commands.
-
-</div>
-
----
-
-<div align="center">
-
-## 🎯 **Overview**
-
-SuperClaude is a **meta-programming configuration framework** that transforms Claude Code into a structured development platform through behavioral instruction injection and component orchestration. It provides systematic workflow automation with powerful tools and intelligent agents.
-
-
-## Disclaimer
-
-This project is not affiliated with or endorsed by Anthropic.  
-Claude Code is a product built and maintained by [Anthropic](https://www.anthropic.com/).
-
-## ⚡ **Quick Installation**
-
-SuperClaude is available as a native Claude Code plugin for easy installation and automatic updates.
-
-```shell
-# Add the SuperClaude marketplace
-/plugin marketplace add SuperClaude-Org/SuperClaude_Plugin
+```bash
+# Add the Airis Agent marketplace
+/plugin marketplace add agiletec-inc/airis-agent
 
 # Install the plugin
-/plugin install sc@superclaude-official
+/plugin install airis-agent
 
 # Restart Claude Code to activate
 ```
 
-**Plugin Benefits:**
-- ✅ **Simple Installation**: One command, no Python/Node.js required
-- ✅ **Automatic Updates**: Managed by Claude Code
-- ✅ **No Conflicts**: Isolated from system packages
-- ✅ **Team Sharing**: Easy distribution via marketplace
-- ✅ **Native Integration**: Seamless Claude Code experience
+---
 
-### **Quick Start**
+## 🎯 Key Features
 
-After installation, restart Claude Code and try:
+### 🔒 **Confidence Gate**
+Pre-implementation assessment that prevents wrong-direction work:
+- Score-based decision making (0.0-1.0)
+- **25-250x token savings** by catching issues early
+- Auto-invoked via `@confidence-check` skill
 
-```shell
-# See all commands
-/sc:help
+### 🔍 **Deep Research**
+Multi-step research with parallel web search:
+- Command: `/research <query>`
+- Integrates Tavily (web) and Context7 (official docs)
+- Returns structured findings with sources
 
-# Start brainstorming
-/sc:brainstorm "your project idea"
+### 📦 **Repository Indexing**
+Generates codebase summaries for context efficiency:
+- Command: `/index-repo`
+- **94% token reduction** for large codebases
+- Produces `PROJECT_INDEX.{md,json}`
 
-# Analyze codebase
-/sc:analyze
+### 🤝 **Specialized Agents**
+- `deep-research.md` - Research specialist
+- `repo-index.md` - Indexing assistant
+- `self-review.md` - Post-implementation validation
 
-# Deep research
-/sc:research "your topic"
+### 🪝 **SessionStart Hook**
+Automatic initialization on every session:
+- Git status checks
+- CLAUDE.md optimization warnings
+- PROJECT_INDEX freshness validation
+
+---
+
+## 📚 Documentation
+
+- **Main Repository**: [github.com/agiletec-inc/airis-agent](https://github.com/agiletec-inc/airis-agent)
+- **Python API**: Install with `pip install airis-agent` for programmatic access
+- **MCP Server**: Available via airis-mcp-gateway for cross-IDE usage
+
+---
+
+## 🛠 Development
+
+This repository contains **generated plugin artifacts**. Source files live in:
+```
+https://github.com/agiletec-inc/airis-agent/tree/main/plugins/airis-agent
 ```
 
-</div>
-
-<details>
-<summary><b>📦 Alternative: pip/npm Installation</b></summary>
-
-SuperClaude V4 is also available via package managers. See the main [SuperClaude Framework repository](https://github.com/SuperClaude-Org/SuperClaude_Framework) for pip/npm installation instructions.
-
-</details>
+To contribute:
+1. Clone main repository: `git clone https://github.com/agiletec-inc/airis-agent.git`
+2. Make changes in `plugins/airis-agent/`
+3. Build: `make build-plugin`
+4. Sync: `make sync-plugin-repo`
 
 ---
 
-<div align="center">
+## 📄 License
 
-## 💖 **Support the Project**
+MIT License - see [LICENSE](LICENSE) for details
 
-> Hey, let's be real - maintaining SuperClaude takes time and resources.
-> 
-> *The Claude Max subscription alone runs $100/month for testing, and that's before counting the hours spent on documentation, bug fixes, and feature development.*
-> *If you're finding value in SuperClaude for your daily work, consider supporting the project.*
-> *Even a few dollars helps cover the basics and keeps development active.*
-> 
-> Every contributor matters, whether through code, feedback, or support. Thanks for being part of this community! 🙏
+## 🙏 Credits
 
-<table>
-<tr>
-<td align="center" width="33%">
-  
-### ☕ **Ko-fi**
-[![Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-ff5e5b?logo=ko-fi)](https://ko-fi.com/superclaude)
+Developed by [Agiletec Inc.](https://github.com/agiletec-inc)
 
-*One-time contributions*
-
-</td>
-<td align="center" width="33%">
-
-### 🎯 **Patreon**
-[![Patreon](https://img.shields.io/badge/Become_a-Patron-f96854?logo=patreon)](https://patreon.com/superclaude)
-
-*Monthly support*
-
-</td>
-<td align="center" width="33%">
-
-### 💜 **GitHub**
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsor-30363D?logo=github-sponsors)](https://github.com/sponsors/SuperClaude-Org)
-
-*Flexible tiers*
-
-</td>
-</tr>
-</table>
-
-### **Your Support Enables:**
-
-| Item | Cost/Impact |
-|------|-------------|
-| 🔬 **Claude Max Testing** | $100/month for validation & testing |
-| ⚡ **Feature Development** | New capabilities & improvements |
-| 📚 **Documentation** | Comprehensive guides & examples |
-| 🤝 **Community Support** | Quick issue responses & help |
-| 🔧 **MCP Integration** | Testing new server connections |
-| 🌐 **Infrastructure** | Hosting & deployment costs |
-
-> **Note:** No pressure though - the framework stays open source regardless. Just knowing people use and appreciate it is motivating. Contributing code, documentation, or spreading the word helps too! 🙏
-
-</div>
-
----
-
-<div align="center">
-
-## 🎉 **What's New in V4**
-
-> *Version 4 brings significant improvements based on community feedback and real-world usage patterns.*
-
-<table>
-<tr>
-<td width="50%">
-
-### 🤖 **Focused Agent System**
-**3 specialized agents** with clear responsibilities:
-- Deep Research agent for autonomous web research
-- Repository Index agent for project mapping
-- Self Review agent for post-implementation validation
-
-</td>
-<td width="50%">
-
-### 📝 **Command Namespace**
-**`/sc:` prefix** for all commands:
-- `/sc:agent` for orchestration
-- `/sc:index-repo` for context compression
-- `/sc:research` for deep research
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🔧 **MCP Server Integration**
-**8 powerful servers** working together:
-- **Context7** → Up-to-date documentation
-- **Sequential** → Complex analysis
-- **Magic** → UI component generation
-- **Playwright** → Browser testing
-- **Morphllm** → Bulk transformations
-- **Serena** → Session persistence
-- **Tavily** → Web search for deep research
-- **Chrome DevTools** → Performance analysis
-
-</td>
-<td width="50%">
-
-### 🎯 **Behavioral Modes**
-**7 adaptive modes** for different contexts:
-- **Brainstorming** → Asks right questions
-- **Business Panel** → Multi-expert strategic analysis
-- **Deep Research** → Autonomous web research
-- **Orchestration** → Efficient tool coordination
-- **Token-Efficiency** → 30-50% context savings
-- **Task Management** → Systematic organization
-- **Introspection** → Meta-cognitive analysis
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### ⚡ **Optimized Performance**
-**Smaller framework, bigger projects:**
-- Reduced framework footprint
-- More context for your code
-- Longer conversations possible
-- Complex operations enabled
-
-</td>
-<td width="50%">
-
-### 📚 **Documentation Overhaul**
-**Complete rewrite** for developers:
-- Real examples & use cases
-- Common pitfalls documented
-- Practical workflows included
-- Better navigation structure
-
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-<div align="center">
-
-## 🔬 **Deep Research Capabilities**
-
-### **Autonomous Web Research Aligned with DR Agent Architecture**
-
-SuperClaude v4.2 introduces comprehensive Deep Research capabilities, enabling autonomous, adaptive, and intelligent web research.
-
-<table>
-<tr>
-<td width="50%">
-
-### 🎯 **Adaptive Planning**
-**Three intelligent strategies:**
-- **Planning-Only**: Direct execution for clear queries
-- **Intent-Planning**: Clarification for ambiguous requests
-- **Unified**: Collaborative plan refinement (default)
-
-</td>
-<td width="50%">
-
-### 🔄 **Multi-Hop Reasoning**
-**Up to 5 iterative searches:**
-- Entity expansion (Paper → Authors → Works)
-- Concept deepening (Topic → Details → Examples)
-- Temporal progression (Current → Historical)
-- Causal chains (Effect → Cause → Prevention)
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 📊 **Quality Scoring**
-**Confidence-based validation:**
-- Source credibility assessment (0.0-1.0)
-- Coverage completeness tracking
-- Synthesis coherence evaluation
-- Minimum threshold: 0.6, Target: 0.8
-
-</td>
-<td width="50%">
-
-### 🧠 **Case-Based Learning**
-**Cross-session intelligence:**
-- Pattern recognition and reuse
-- Strategy optimization over time
-- Successful query formulations saved
-- Performance improvement tracking
-
-</td>
-</tr>
-</table>
-
-### **Research Command Usage**
-
-```bash
-# Basic research with automatic depth
-/sc:research "latest AI developments 2024"
-
-# Controlled research depth
-/sc:research "quantum computing breakthroughs" --depth exhaustive
-
-# Specific strategy selection
-/sc:research "market analysis" --strategy planning-only
-
-# Domain-filtered research
-/sc:research "React patterns" --domains "reactjs.org,github.com"
-```
-
-### **Research Depth Levels**
-
-| Depth | Sources | Hops | Time | Best For |
-|:-----:|:-------:|:----:|:----:|----------|
-| **Quick** | 5-10 | 1 | ~2min | Quick facts, simple queries |
-| **Standard** | 10-20 | 3 | ~5min | General research (default) |
-| **Deep** | 20-40 | 4 | ~8min | Comprehensive analysis |
-| **Exhaustive** | 40+ | 5 | ~10min | Academic-level research |
-
-### **Integrated Tool Orchestration**
-
-The Deep Research system intelligently coordinates multiple tools:
-- **Tavily MCP**: Primary web search and discovery
-- **Playwright MCP**: Complex content extraction
-- **Sequential MCP**: Multi-step reasoning and synthesis
-- **Serena MCP**: Memory and learning persistence
-- **Context7 MCP**: Technical documentation lookup
-
-</div>
-
----
-
-<div align="center">
-
-## 📚 **Documentation**
-
-### **Complete Guide to SuperClaude**
-
-<table>
-<tr>
-<th align="center">🚀 Getting Started</th>
-<th align="center">📖 User Guides</th>
-<th align="center">🛠️ Developer Resources</th>
-<th align="center">📋 Reference</th>
-</tr>
-<tr>
-<td valign="top">
-
-- 📝 [**Quick Start Guide**](Docs/Getting-Started/quick-start.md)  
-  *Get up and running fast*
-
-- 💾 [**Installation Guide**](Docs/Getting-Started/installation.md)  
-  *Detailed setup instructions*
-
-</td>
-<td valign="top">
-
-- 🎯 [**Commands Reference**](Docs/User-Guide/commands.md)  
-  *All 25 slash commands*
-
-- 🤖 [**Agents Guide**](Docs/User-Guide/agents.md)  
-  *15 specialized agents*
-
-- 🎨 [**Behavioral Modes**](Docs/User-Guide/modes.md)  
-  *7 adaptive modes*
-
-- 🚩 [**Flags Guide**](Docs/User-Guide/flags.md)  
-  *Control behaviors*
-
-- 🔧 [**MCP Servers**](Docs/User-Guide/mcp-servers.md)  
-  *7 server integrations*
-
-- 💼 [**Session Management**](Docs/User-Guide/session-management.md)  
-  *Save & restore state*
-
-</td>
-<td valign="top">
-
-- 🏗️ [**Technical Architecture**](Docs/Developer-Guide/technical-architecture.md)  
-  *System design details*
-
-- 💻 [**Contributing Code**](Docs/Developer-Guide/contributing-code.md)  
-  *Development workflow*
-
-- 🧪 [**Testing & Debugging**](Docs/Developer-Guide/testing-debugging.md)  
-  *Quality assurance*
-
-</td>
-<td valign="top">
-- 📓 [**Examples Cookbook**](Docs/Reference/examples-cookbook.md)  
-  *Real-world recipes*
-
-- 🔍 [**Troubleshooting**](Docs/Reference/troubleshooting.md)  
-  *Common issues & fixes*
-
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-<div align="center">
-
-## 🤝 **Contributing**
-
-### **Join the SuperClaude Community**
-
-We welcome contributions of all kinds! Here's how you can help:
-
-| Priority | Area | Description |
-|:--------:|------|-------------|
-| 📝 **High** | Documentation | Improve guides, add examples, fix typos |
-| 🔧 **High** | MCP Integration | Add server configs, test integrations |
-| 🎯 **Medium** | Workflows | Create command patterns & recipes |
-| 🧪 **Medium** | Testing | Add tests, validate features |
-| 🌐 **Low** | i18n | Translate docs to other languages |
-
-<p align="center">
-  <a href="CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/📖_Read-Contributing_Guide-blue" alt="Contributing Guide">
-  </a>
-  <a href="https://github.com/SuperClaude-Org/SuperClaude_Framework/graphs/contributors">
-    <img src="https://img.shields.io/badge/👥_View-All_Contributors-green" alt="Contributors">
-  </a>
-</p>
-
-</div>
-
----
-
-<div align="center">
-
-## ⚖️ **License**
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-<p align="center">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?" alt="MIT License">
-</p>
-
-</div>
-
----
-
-<div align="center">
-
-## ⭐ **Star History**
-
-<a href="https://www.star-history.com/#SuperClaude-Org/SuperClaude_Framework&Timeline">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=SuperClaude-Org/SuperClaude_Framework&type=Timeline&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=SuperClaude-Org/SuperClaude_Framework&type=Timeline" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=SuperClaude-Org/SuperClaude_Framework&type=Timeline" />
- </picture>
-</a>
-
-
-</div>
-
----
-
-<div align="center">
-
-### **🚀 Built with passion by the SuperClaude community**
-
-<p align="center">
-  <sub>Made with ❤️ for developers who push boundaries</sub>
-</p>
-
-<p align="center">
-  <a href="#-superclaude-framework">Back to Top ↑</a>
-</p>
-
-</div>
+**Evolution**:
+- v0.x: SuperClaude_Framework
+- v1.0: Rebranded to Airis Agent with ABI-first architecture

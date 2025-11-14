@@ -1,16 +1,8 @@
 {
-  "name": "superclaude",
-  "description": "SuperClaude plugin marketplace",
-  "owner": {
-    "name": "SuperClaude Team"
-  },
-  "plugins": [
-    {
-      "name": "superclaude",
-      "source": "./",
-      "version": "4.1.6",
-      "description": "SuperClaude - Confidence-driven orchestrator with deep research and repository indexing"
-    }
-  ]
+  "name": "airis-agent",
+  "description": "Airis Agent - Autonomous workflow orchestration and intelligence layer for Claude Code",
+  "homepage": "https://github.com/agiletec-inc/airis-agent",
+  "repository": "https://github.com/agiletec-inc/airis-agent",
+  "version": "1.0.0"
 }
 
