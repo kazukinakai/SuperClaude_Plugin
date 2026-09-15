@@ -1,5 +1,5 @@
 ---
-
+name: cleanup
 description: "Systematically clean up code, remove dead code, and optimize project structure"
 category: workflow
 complexity: standard
@@ -37,6 +37,7 @@ Key behaviors:
 - **Sequential MCP**: Auto-activated for complex multi-step cleanup analysis and planning
 - **Context7 MCP**: Framework-specific cleanup patterns and best practices
 - **Persona Coordination**: Architect (structure), Quality (debt), Security (credentials)
+- **Availability fallback**: The MCP servers named here are preferred tooling, not hard requirements — when one is not installed, degrade gracefully (native reasoning in place of Sequential, official docs via web lookup in place of Context7, native tools otherwise) instead of routing work to absent servers.
 
 ## Tool Coordination
 - **Read/Grep/Glob**: Code analysis and pattern detection for cleanup opportunities

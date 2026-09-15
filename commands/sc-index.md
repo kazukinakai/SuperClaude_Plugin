@@ -1,5 +1,5 @@
 ---
-
+name: index
 description: "Generate comprehensive project documentation and knowledge base with intelligent organization"
 category: special
 complexity: standard
@@ -37,6 +37,7 @@ Key behaviors:
 - **Sequential MCP**: Complex multi-step project analysis and systematic documentation generation
 - **Context7 MCP**: Framework-specific documentation patterns and established standards
 - **Persona Coordination**: Architect (structure), Scribe (content), Quality (validation)
+- **Availability fallback**: The MCP servers named here are preferred tooling, not hard requirements — when one is not installed, degrade gracefully (native reasoning in place of Sequential, official docs via web lookup in place of Context7, native tools otherwise) instead of routing work to absent servers.
 
 ## Tool Coordination
 - **Read/Grep/Glob**: Project structure analysis and content extraction for documentation generation
